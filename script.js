@@ -10,6 +10,7 @@ function showPDF(pdfUrl) {
   close.innerHTML = "<i class='material-icons'>close</i>";
   close.onclick = function() {
     popup.remove();
+    document.getElementById("header").style.zIndex = "100"; // Set z-index of header to 100
   }
   popup.appendChild(close);
   // Embed PDF viewer
@@ -20,7 +21,7 @@ function showPDF(pdfUrl) {
 
   // Show popup
   document.body.appendChild(popup);
-
+document.getElementById("header").style.zIndex = "-1"; // Set z-index of header to 100
 
 
 }
